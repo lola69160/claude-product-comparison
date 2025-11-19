@@ -75,8 +75,9 @@ product-comparison/
 **Sources**: Manufacturer site + Amazon + Review site (velo-vert, lesnumeriques, etc.)
 
 **Process**:
-- WebFetch 3 sources en parallèle
-- Parse HTML tables / structured data
+- **MCP Primary**: `apify/amazon-product-scraper` pour specs Amazon (JSON structuré)
+- **MCP Secondary**: `apify/rag-web-browser` pour manufacturer + review sites
+- **Fallback**: WebFetch si MCP timeout (>2 min)
 - Merge + normalize (units, formats)
 - Validate vs category_specs.yaml (required_specs)
 - Completeness score: 100% = parfait, <70% = warning
@@ -88,6 +89,11 @@ product-comparison/
 - **Users**: Amazon reviews + Reddit mentions
 - **Experts**: 2-3 sites selon catégorie (velo-vert, wirecutter, caradisiac...)
 
+**Tools MCP**:
+- `apify/amazon-reviews-scraper` → 50-100 reviews Amazon (JSON avec rating, text, date)
+- `apify/reddit-scraper` → Posts/comments Reddit mentionnant le produit
+- `apify/rag-web-browser` → Sites experts (fallback: WebFetch)
+
 **Analyse**:
 - Sentiment scoring (0-5 scale)
 - Extract pros/cons patterns (frequency analysis)
@@ -97,6 +103,10 @@ product-comparison/
 
 ### 4. Pricing Tracking (pricing-tracker)
 **Retailers**: Amazon + 2-3 sites catégorie (Decathlon pour vélo, Darty pour électroménager)
+
+**Tools MCP**:
+- `apify/amazon-product-scraper` → Prix Amazon, availability, prime eligible
+- `apify/rag-web-browser` → Prix autres retailers (Decathlon, Darty, etc.)
 
 **Extract**: Prix actuel, availability, shipping, promos actives
 
@@ -184,11 +194,13 @@ Output: Rapport en 3 min (6× faster)
 - ❌ JAMAIS recommander basé sur specs seules sans avis users
 - ❌ JAMAIS ignorer consensus experts si contredit avis users (investigate why)
 
-### 2. Scraping avec WebFetch Uniquement
-- ✅ Utiliser WebFetch pour TOUS les scraping (comme veille-linkedin)
-- ✅ Pas de MCP servers requis (sauf si user explicitly veut ajouter)
-- ✅ Si WebFetch échoue sur 1 source → Continue avec autres (graceful degradation)
+### 2. Stratégie MCP-First avec Fallback WebFetch
+- ✅ Utiliser **MCP Apify Actors en priorité** (JSON structuré, plus fiable)
+- ✅ **Fallback automatique** vers WebFetch si MCP échoue ou timeout (>2 min)
+- ✅ Si MCP ET WebFetch échouent sur 1 source → Continue avec autres (graceful degradation)
+- ✅ Toujours utiliser `get-actor-output` pour récupérer résultats complets (pas juste preview)
 - ❌ JAMAIS bloquer workflow si 1 source inaccessible
+- ❌ JAMAIS oublier step "info" avant "call" sur un Actor inconnu
 
 ### 3. Caching Intelligent
 - ✅ Cache ALL data 7 jours (specs, reviews, pricing)
@@ -219,16 +231,32 @@ Output: Rapport en 3 min (6× faster)
 
 ### Produit Introuvable
 ```
-WebFetch Google returns < 3 results for product:
+MCP rag-web-browser Google returns < 3 results for product:
 → Ask user: "Produit '{name}' introuvable. Voulez-vous dire: [suggestions]?"
 → Retry with corrected name
 ```
 
-### Source Scraping Échoue
+### MCP Actor Timeout/Erreur
 ```
-WebFetch returns 404/timeout for review site:
+MCP call-actor timeout après 2 min ou erreur:
+→ Log error avec Actor name + input
+→ Fallback immédiat vers WebFetch pour cette source
+→ Continue workflow normalement
+```
+
+### Source Scraping Échoue (MCP + WebFetch)
+```
+MCP ET WebFetch échouent pour review site:
 → Log error, continue with other sources
-→ Note in report: "Review site X inaccessible (date)"
+→ Note in report: "Review site X inaccessible (date) - MCP timeout, WebFetch 404"
+```
+
+### DatasetId Non Récupéré
+```
+MCP call-actor réussit mais pas de datasetId:
+→ Check response pour "defaultDatasetId"
+→ Si absent, retry avec get-actor-output sur le runId
+→ Si toujours échec, fallback WebFetch
 ```
 
 ### Specs Incomplètes (< 70%)
@@ -249,11 +277,14 @@ Manufacturer: 13kg, Expert review: 13.5kg:
 ## Performance Metrics
 
 ### Target Benchmarks
-- **First run** (no cache): 18-25 min (2 products researched in parallel)
+- **First run** (no cache): 15-20 min (2 products researched in parallel, MCP plus rapide)
 - **Cached run**: 3-5 min (load cache + generate report)
-- **Speedup with cache**: 6× faster
-- **Cost**: $0 (pas d'APIs payantes, juste WebFetch)
-- **Data completeness**: 90%+ specs, 100+ reviews analyzed
+- **Speedup with cache**: 4-6× faster
+- **Cost**: Apify free tier (~5$/mois pour usage modéré) ou crédits payants
+  - Amazon scraper: ~0.50$ / 1000 products
+  - Reviews scraper: ~0.25$ / 1000 reviews
+  - RAG browser: ~0.10$ / 100 pages
+- **Data completeness**: 95%+ specs (JSON structuré), 100+ reviews analyzed
 - **Report quality**: Professional (ready to share with client)
 
 ### Actual Metrics (Per Comparison)
@@ -284,6 +315,46 @@ Manufacturer: 13kg, Expert review: 13.5kg:
 - **Fallback automatique** vers WebFetch si MCP échoue
 - **Timeout MCP**: 2 minutes par requête
 - **Config MCP**: Voir `.claude/config.json` section "mcp"
+
+### MCP Actors par Catégorie
+
+| Catégorie | Specs | Reviews | Pricing | Recherche |
+|-----------|-------|---------|---------|-----------|
+| **Tous** | `amazon-product-scraper` | `amazon-reviews-scraper` | `amazon-product-scraper` | `rag-web-browser` |
+| **Tous** | - | `reddit-scraper` | - | - |
+| **Électroménager** | rag-web-browser (lesnumeriques) | rag-web-browser (wirecutter) | rag-web-browser (darty, boulanger) | - |
+| **Vélo** | rag-web-browser (decathlon) | rag-web-browser (velo-vert) | rag-web-browser (alltricks) | - |
+| **Auto** | rag-web-browser (constructeur) | rag-web-browser (caradisiac) | rag-web-browser (lacentrale) | - |
+
+### Workflow MCP Détaillé
+
+```
+1. RECHERCHE PRODUIT
+   mcp__apify__apify-slash-rag-web-browser
+   → query: "{product_name} specs reviews"
+   → maxResults: 5
+
+2. SPECS AMAZON
+   mcp__apify__call-actor (step: "info" puis "call")
+   → actor: "apify/amazon-product-scraper"
+   → input: { "search": "{product_name}", "maxItems": 1 }
+   → Récupérer datasetId
+
+3. REVIEWS AMAZON
+   mcp__apify__call-actor
+   → actor: "apify/amazon-reviews-scraper"
+   → input: { "productUrls": ["{amazon_url}"], "maxReviews": 50 }
+
+4. REDDIT MENTIONS
+   mcp__apify__call-actor
+   → actor: "apify/reddit-scraper"
+   → input: { "searches": ["{product_name}"], "maxItems": 20 }
+
+5. RÉCUPÉRATION RÉSULTATS
+   mcp__apify__get-actor-output
+   → datasetId: "{from_step_2/3/4}"
+   → fields: "title,price,rating,specs" (selon besoin)
+```
 
 ## Anti-Patterns (INTERDITS)
 
@@ -333,6 +404,12 @@ Verdict:
 
 ---
 
-**Version**: 1.0
-**Dernière mise à jour**: 2025-01-15
+**Version**: 1.1
+**Dernière mise à jour**: 2025-11-19
 **Mainteneur**: Product Analyst Claude
+
+### Changelog v1.1
+- Migration vers stratégie MCP-First (Apify Actors)
+- Ajout workflow MCP détaillé et Actors par catégorie
+- Mise à jour Error Handling avec fallback MCP → WebFetch
+- Correction Performance Metrics avec coûts Apify
