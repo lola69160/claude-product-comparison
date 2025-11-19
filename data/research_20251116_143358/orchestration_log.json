@@ -1,0 +1,27 @@
+{
+  "session_id": "research_20251116_143358",
+  "timestamp_start": "2025-11-16T14:33:58Z",
+  "products": ["Dyson V15 Detect", "Shark Stratos"],
+  "category": "electromenager",
+  "cache_status": {
+    "product1": {"specs": "miss", "reviews": "miss", "pricing": "miss"},
+    "product2": {"specs": "miss", "reviews": "miss", "pricing": "miss"}
+  },
+  "subagents": [
+    {
+      "id": "subagent_dyson",
+      "product": "Dyson V15 Detect",
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "subagent_shark",
+      "product": "Shark Stratos",
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null
+    }
+  ],
+  "errors": []
+}

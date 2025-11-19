@@ -1,0 +1,86 @@
+# Spécifications requises par catégorie de produit
+# Utilisé par specs-collector pour valider complétude des données
+
+electromenager:
+  required_specs:
+    - puissance_W
+    - capacite_L
+    - niveau_bruit_dB
+    - conso_energie
+    - poids_kg
+    - dimensions_cm
+    - garantie_ans
+  review_sites:
+    - consumerreports.org
+    - wirecutter.com
+    - lesnumeriques.com
+    - quechoisir.org
+  retailers:
+    - amazon.fr
+    - boulanger.com
+    - darty.com
+    - fnac.com
+
+auto:
+  required_specs:
+    - motorisation
+    - puissance_ch
+    - conso_L_100km
+    - coffre_L
+    - prix_base
+    - garantie_ans
+    - emission_CO2
+    - nb_places
+  review_sites:
+    - caradisiac.com
+    - largus.fr
+    - automobile-magazine.fr
+    - autoplus.fr
+  retailers:
+    - leboncoin.fr
+    - lacentrale.fr
+    - autoscout24.fr
+    - auto-occasion.fr
+
+sport:
+  required_specs:
+    - poids_kg
+    - materiaux
+    - taille
+    - certifications
+    - garantie
+    - resistance_eau
+  review_sites:
+    - outdoor-mag.fr
+    - i-run.fr
+    - jogging-international.net
+  retailers:
+    - decathlon.fr
+    - amazon.fr
+    - alltricks.fr
+    - i-run.fr
+
+velo:
+  required_specs:
+    - type_velo
+    - taille_cadre_cm
+    - poids_kg
+    - nb_vitesses
+    - freins
+    - materiau_cadre
+    - suspension
+    - prix
+    - roues_pouces
+  review_sites:
+    - velo-vert.com
+    - citycle.com
+    - lecyclo.com
+    - velomag.com
+    - cyclingweekly.com
+  retailers:
+    - decathlon.fr
+    - alltricks.fr
+    - probikeshop.fr
+    - amazon.fr
+    - lecyclo.com
+    - chainreactioncycles.com

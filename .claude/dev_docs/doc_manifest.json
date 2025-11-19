@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "last_update": "2025-11-16T00:00:00Z",
+  "tracked_files": {
+    "skills": [
+      "documentation-updater",
+      "pricing-tracker",
+      "product-research-orchestrator",
+      "report-generator",
+      "reviews-aggregator",
+      "specs-collector"
+    ],
+    "hooks": [
+      "pre_research.js",
+      "post_collection.js"
+    ],
+    "config": [
+      "settings.json",
+      "skill-rules.json"
+    ]
+  },
+  "checksums": {
+    "skills/documentation-updater/SKILL.md": "pending_initial_scan",
+    "skills/pricing-tracker/SKILL.md": "pending_initial_scan",
+    "skills/product-research-orchestrator/SKILL.md": "pending_initial_scan",
+    "skills/report-generator/SKILL.md": "pending_initial_scan",
+    "skills/reviews-aggregator/SKILL.md": "pending_initial_scan",
+    "skills/specs-collector/SKILL.md": "pending_initial_scan",
+    ".claude/hooks/pre_research.js": "pending_initial_scan",
+    ".claude/hooks/post_collection.js": "pending_initial_scan",
+    ".claude/settings.json": "pending_initial_scan",
+    ".claude/skill-rules.json": "pending_initial_scan",
+    "CLAUDE.md": "pending_initial_scan",
+    "INDEX.md": "pending_initial_scan"
+  },
+  "notes": "Initial manifest created. Checksums will be calculated on first documentation-updater run."
+}

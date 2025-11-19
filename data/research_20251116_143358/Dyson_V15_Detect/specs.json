@@ -1,0 +1,53 @@
+{
+  "product_name": "Dyson V15 Detect",
+  "category": "electromenager",
+  "timestamp": "2025-11-16T14:35:00Z",
+  "specs": {
+    "puissance_W": 660,
+    "puissance_aspiration_AW": 230,
+    "capacite_L": 0.77,
+    "niveau_bruit_dB": 82,
+    "poids_kg": 3.1,
+    "poids_corps_kg": 2.07,
+    "dimensions_cm": {
+      "hauteur": 126,
+      "largeur": 25,
+      "profondeur": 26.6
+    },
+    "autonomie_min": 60,
+    "temps_charge_h": 4.5,
+    "garantie_ans": 2,
+    "filtration": "HEPA",
+    "modes_puissance": 3,
+    "detecteur_particules": "Piezo sensor",
+    "laser_detection": true,
+    "aspiration_kPa": 17.6
+  },
+  "sources": [
+    {
+      "name": "Web Search - Multiple sources",
+      "url": "vacuumwars.com, techradar.com, manua.ls",
+      "date_accessed": "2025-11-16",
+      "reliability": "high"
+    },
+    {
+      "name": "Dyson official",
+      "url": "https://www.dyson.fr",
+      "date_accessed": "2025-11-16",
+      "status": "connection_failed"
+    },
+    {
+      "name": "Amazon.fr",
+      "url": "https://www.amazon.fr/Dyson-Detect-Aspirateur-Jaune-nickel/dp/B0979R48CX",
+      "date_accessed": "2025-11-16",
+      "status": "specs_not_extractable_from_js"
+    }
+  ],
+  "completeness": {
+    "required_specs_found": 5,
+    "required_specs_total": 7,
+    "percentage": 71,
+    "missing_specs": ["conso_energie", "garantie_ans (assumed)"],
+    "bonus_specs": ["autonomie_min", "temps_charge_h", "puissance_aspiration_AW", "filtration", "detecteur_particules", "laser_detection", "aspiration_kPa"]
+  }
+}

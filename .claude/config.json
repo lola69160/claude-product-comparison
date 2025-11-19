@@ -1,0 +1,84 @@
+{
+  "project": {
+    "name": "product-comparison",
+    "version": "1.0.0",
+    "description": "Système de comparaison produit avec recherche parallèle et rapports professionnels"
+  },
+
+  "skills": {
+    "progressive_disclosure": true,
+    "default_timeout_ms": 300000
+  },
+
+  "subagents": {
+    "max_parallel": 2,
+    "context_isolation": true,
+    "timeout_ms": 900000,
+    "temp_cleanup": {
+      "enabled": true,
+      "max_age_ms": 86400000
+    }
+  },
+
+  "cache": {
+    "enabled": true,
+    "ttl_days": 7,
+    "location": "data/cache/",
+    "types": ["specs", "reviews", "pricing"]
+  },
+
+  "logging": {
+    "enabled": true,
+    "level": "info",
+    "location": ".claude/logs/",
+    "max_file_size_mb": 10,
+    "retention_days": 30
+  },
+
+  "features": {
+    "parallel_research": true,
+    "auto_cache": true,
+    "data_validation": true,
+    "report_generation": true
+  },
+
+  "mcp": {
+    "apify": {
+      "enabled": true,
+      "timeout_ms": 120000,
+      "fallback_to_webfetch": true,
+      "actors": {
+        "amazon_product": "apify/amazon-product-scraper",
+        "amazon_reviews": "apify/amazon-reviews-scraper",
+        "reddit": "apify/reddit-scraper",
+        "web_browser": "apify/rag-web-browser"
+      },
+      "tools": {
+        "primary": [
+          "mcp__apify__apify-slash-rag-web-browser",
+          "mcp__apify__call-actor",
+          "mcp__apify__get-actor-output"
+        ],
+        "discovery": [
+          "mcp__apify__search-actors",
+          "mcp__apify__fetch-actor-details"
+        ]
+      },
+      "strategy": {
+        "priority": ["mcp_apify", "webfetch"],
+        "parallel_requests": true,
+        "max_retries": 1
+      }
+    }
+  },
+
+  "hooks": {
+    "guardrails": {
+      "infiniteLoopProtection": true,
+      "lockFile": ".claude/.hook_lock",
+      "lockTimeout_ms": 30000,
+      "maxRetries": 3,
+      "cooldownBetweenRuns_ms": 5000
+    }
+  }
+}

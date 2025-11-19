@@ -1,0 +1,151 @@
+{
+  "product_name": "Shark Stratos Cordless",
+  "model_numbers": ["IZ862H", "IZ400EUTDB", "IZ400EU"],
+  "category": "electromenager",
+  "timestamp": "2025-11-16T14:35:00Z",
+  "required_specs": {
+    "puissance_W": {
+      "value": 309,
+      "source": "indors.eu",
+      "confidence": "medium",
+      "notes": "309W motor mentioned for IZ400EU model"
+    },
+    "capacite_L": {
+      "value": 0.7,
+      "source": "indors.eu",
+      "confidence": "high",
+      "notes": "0.7L tank capacity, also reported as 0.79 quarts (0.75L) for IZ862H"
+    },
+    "niveau_bruit_dB": {
+      "value": "67.2-77.1",
+      "value_by_mode": {
+        "eco": 64.9,
+        "iq_mode": 69.1,
+        "boost": 77.1
+      },
+      "source": "moderncastle.com, multiple reviews",
+      "confidence": "high",
+      "notes": "Range varies by power mode: ECO 64.9-72dB, Boost 77.1-84dB depending on test source"
+    },
+    "conso_energie": {
+      "value": "not_specified",
+      "source": "none",
+      "confidence": "none",
+      "notes": "Energy consumption class not provided by manufacturer or retailers"
+    },
+    "poids_kg": {
+      "value": 2.16,
+      "value_handheld": 2.1,
+      "value_full_unit": 3.94,
+      "source": "sharkclean.fr (official), multiple sources",
+      "confidence": "high",
+      "notes": "Handheld unit: 2.1-2.16kg, Full assembled unit: ~4kg (8.68 lbs = 3.94kg)"
+    },
+    "dimensions_cm": {
+      "value": "114 x 27 x 17",
+      "height_cm": 114,
+      "width_cm": 27,
+      "depth_cm": 17,
+      "source": "sharkclean.fr (official French site)",
+      "confidence": "high"
+    },
+    "garantie_ans": {
+      "value": 5,
+      "battery_warranty": 2,
+      "source": "sharkclean.fr (official)",
+      "confidence": "high",
+      "notes": "5 years for vacuum, 2 years for battery (French market)"
+    }
+  },
+  "additional_specs": {
+    "battery": {
+      "type": "Lithium-ion removable",
+      "voltage": "25.2V",
+      "runtime_eco": "60 minutes",
+      "runtime_boost": "10-15 minutes (estimated)",
+      "charge_time": "3-4 hours",
+      "source": "multiple sources"
+    },
+    "motor": {
+      "type": "HyperVelocity Plus",
+      "description": "Most powerful Shark cordless motor"
+    },
+    "filtration": {
+      "type": "HEPA",
+      "efficiency": "99.9% dust and allergens",
+      "washable": true
+    },
+    "cleaning_path": {
+      "width_inches": 10,
+      "width_cm": 25.4
+    },
+    "technologies": {
+      "clean_sense_iq": "Infrared dirt detection, automatic power adjustment",
+      "duoclean_powerfins": "Two brushroll system for carpets and hard floors",
+      "multiflex": "Wand bends for under-furniture cleaning",
+      "odor_neutralizer": "Cartridge-based odor neutralization",
+      "anti_hair_wrap": "Self-cleaning brushroll"
+    },
+    "accessories_included": [
+      "Crevice tool",
+      "Anti-allergen dust brush",
+      "Duster crevice tool (some models)"
+    ],
+    "convertible": "Converts to handheld vacuum",
+    "led_headlights": true,
+    "led_display": "Real-time battery and suction level"
+  },
+  "specs_completeness": {
+    "required_specs_found": 6,
+    "required_specs_total": 7,
+    "completeness_pct": 85.7,
+    "missing_specs": ["conso_energie"],
+    "status": "good"
+  },
+  "sources": [
+    {
+      "name": "Shark Official France",
+      "url": "https://sharkclean.fr/produits/aspirateur-balai-sans-fil-stratos-de-shark-iz400eutdb-zidIZ400EUTDB",
+      "reliability": "high",
+      "specs_provided": ["poids_kg", "dimensions_cm", "garantie_ans", "battery_runtime"]
+    },
+    {
+      "name": "Modern Castle Review",
+      "url": "https://moderncastle.com/vacuum-cleaners/shark-stratos-cordless-review/",
+      "reliability": "high",
+      "specs_provided": ["niveau_bruit_dB", "performance_tests"]
+    },
+    {
+      "name": "Indors EU",
+      "url": "https://indors.eu/wet-and-dry-vacuum-cleaners/8544-shark-iz400eu-stratos-electric-broom-cordless.html",
+      "reliability": "medium",
+      "specs_provided": ["puissance_W", "capacite_L"]
+    },
+    {
+      "name": "Multiple review sites",
+      "urls": ["rtings.com", "techradar.com", "vacuumwars.com"],
+      "reliability": "high",
+      "specs_provided": ["poids_kg", "niveau_bruit_dB", "battery_specs"]
+    }
+  ],
+  "discrepancies": [
+    {
+      "spec": "poids_kg",
+      "values": {
+        "handheld_only": "2.1-2.16kg",
+        "full_unit": "3.94kg (8.68 lbs)"
+      },
+      "resolution": "Different measurements - handheld vs full assembled unit"
+    },
+    {
+      "spec": "niveau_bruit_dB",
+      "values": {
+        "source_1": "67.2-75.8 dB",
+        "source_2": "64.9-77.1 dB",
+        "source_3": "72-84 dB"
+      },
+      "resolution": "Variation due to different power modes and testing methodologies"
+    }
+  ],
+  "data_quality": "good"
+}

@@ -1,0 +1,37 @@
+{
+  "collection_timestamp": "2025-11-16T14:35:00Z",
+  "product": "Dyson V15 Detect",
+  "sources_attempted": 3,
+  "sources_successful": 1,
+  "sources_detail": [
+    {
+      "source": "Dyson Official Website",
+      "url": "https://www.dyson.fr/aspirateurs/sans-fil/dyson-v15-detect",
+      "status": "failed",
+      "error": "ECONNRESET - connection failed",
+      "specs_extracted": 0
+    },
+    {
+      "source": "Amazon.fr",
+      "url": "https://www.amazon.fr/Dyson-Detect-Aspirateur-Jaune-nickel/dp/B0979R48CX",
+      "status": "partial",
+      "error": "JavaScript-heavy page, specs not directly extractable",
+      "specs_extracted": 0
+    },
+    {
+      "source": "Web Search - Aggregate",
+      "urls": [
+        "https://vacuumwars.com/dyson-v15-detect-review/",
+        "https://www.techradar.com/reviews/dyson-v15-detect-absolute",
+        "https://www.manua.ls/dyson/v15-detect/specifications",
+        "https://www.bestcordlessvacuumguide.com/dyson-v15-detect-review/"
+      ],
+      "status": "success",
+      "specs_extracted": 12
+    }
+  ],
+  "completeness_percentage": 71,
+  "quality_assessment": "good",
+  "notes": "Primary official sources failed, but web search provided comprehensive specs from multiple reliable review sites. Missing energy consumption data and warranty details.",
+  "duration_seconds": 180
+}

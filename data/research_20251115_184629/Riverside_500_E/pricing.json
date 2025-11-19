@@ -1,0 +1,47 @@
+{
+  "product": "Riverside 500 E",
+  "collected_at": "2025-11-15T19:05:00Z",
+  "retailers": [
+    {
+      "name": "Decathlon.fr",
+      "price": 1299.99,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "condition": "new",
+      "url": "https://www.decathlon.fr/p/velo-tout-chemin-electrique-riverside-500-e-gris/_/R-p-169143",
+      "shipping": "Livraison gratuite en magasin",
+      "colors": ["Gris", "Gris/Rouge"]
+    },
+    {
+      "name": "Decathlon.fr Seconde Vie",
+      "price": 1170,
+      "currency": "EUR",
+      "availability": "limited_stock",
+      "condition": "refurbished_excellent",
+      "url": "https://www.decathlon.fr/produits-reconditionnes/vtc-reconditionnes",
+      "shipping": "Livraison gratuite en magasin",
+      "note": "Vélo reconditionné état excellent"
+    },
+    {
+      "name": "Alltricks.fr",
+      "price": 1299,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "condition": "new",
+      "url": "https://www.alltricks.fr/F-187976-velo-ville_voyage_vtc/P-1940570-vtc_electrique_riverside_500_e_panache_8v_418_wh_gris_2021",
+      "shipping": "Livraison à domicile",
+      "colors": ["Gris", "Vert"]
+    }
+  ],
+  "best_price": 1170,
+  "best_retailer": "Decathlon.fr Seconde Vie (reconditionné)",
+  "best_price_new": 1299,
+  "best_retailer_new": "Decathlon.fr / Alltricks.fr",
+  "price_range": {
+    "min": 1170,
+    "max": 1299.99
+  },
+  "availability_summary": "Largement disponible neuf chez Decathlon et Alltricks. Option reconditionnée disponible à -130€.",
+  "retailers_checked": 3,
+  "retailers_failed": ["Amazon.fr (non disponible)"]
+}

@@ -1,0 +1,57 @@
+{
+  "product": "Rockrider ST 530",
+  "collected_at": "2025-11-15T19:05:00Z",
+  "retailers": [
+    {
+      "name": "Decathlon.fr",
+      "price": null,
+      "currency": "EUR",
+      "availability": "discontinued",
+      "condition": "n/a",
+      "url": "https://www.decathlon.fr",
+      "note": "Produit discontinué, remplacé par ST 530 S (tout suspendu) à 659.99€",
+      "replacement_model": {
+        "name": "Rockrider ST 530 S",
+        "price": 659.99,
+        "type": "VTT tout suspendu"
+      }
+    },
+    {
+      "name": "Leboncoin.fr (marché secondaire)",
+      "price": 250,
+      "price_range": {
+        "min": 70,
+        "max": 550
+      },
+      "currency": "EUR",
+      "availability": "variable",
+      "condition": "used",
+      "url": "https://www.leboncoin.fr/ck/velos/rockrider-st-530",
+      "note": "Prix médian basé sur listings actifs. Grande variation selon état et taille.",
+      "common_prices": [200, 230, 240, 280, 300]
+    },
+    {
+      "name": "Alltricks.fr",
+      "price": null,
+      "currency": "EUR",
+      "availability": "out_of_stock",
+      "condition": "n/a",
+      "note": "Modèle non disponible (discontinué)"
+    }
+  ],
+  "original_msrp": 460,
+  "best_price": 250,
+  "best_retailer": "Leboncoin.fr (marché secondaire)",
+  "price_range": {
+    "min": 70,
+    "max": 550,
+    "median": 250
+  },
+  "availability_summary": "Produit discontinué. Disponible uniquement marché secondaire (leboncoin.fr) entre 70-550€, prix médian ~250€. Remplacé par ST 530 S à 659.99€.",
+  "retailers_checked": 3,
+  "warnings": [
+    "Modèle discontinué - plus vendu neuf",
+    "Prix secondaire très variables selon état",
+    "Modèle de remplacement (ST 530 S) coûte 200€ de plus (tout suspendu)"
+  ]
+}

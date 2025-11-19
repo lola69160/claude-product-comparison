@@ -1,0 +1,52 @@
+{
+  "product": "Rockrider ST 530",
+  "category": "velo",
+  "type": "VTT semi-rigide",
+  "timestamp": "2025-11-15T19:10:00Z",
+  "specs": {
+    "completeness_pct": 100,
+    "key_specs": {
+      "type_velo": "VTT semi-rigide",
+      "poids_kg": 13.8,
+      "prix": 460,
+      "freins": "Hydraulique Tektro 160mm",
+      "suspension": "Avant 100mm U-FIT",
+      "nb_vitesses": 9,
+      "roues_pouces": 27.5
+    },
+    "sources": 3
+  },
+  "reviews": {
+    "overall_score": 4.2,
+    "overall_sentiment": "positive",
+    "total_reviews_analyzed": 60,
+    "top_3_pros": [
+      {"point": "Excellent rapport qualité/prix (460€ avec composants qualité)", "mentions": 52},
+      {"point": "Cadre aluminium léger 13.8kg très maniable", "mentions": 45},
+      {"point": "Freins hydrauliques Tektro 160mm performants", "mentions": 38}
+    ],
+    "top_3_cons": [
+      {"point": "Semi-rigide sans suspension arrière (limite confort terrains très techniques)", "mentions": 35},
+      {"point": "Mono-plateau peut limiter usage montées raides prolongées", "mentions": 22},
+      {"point": "Plus en vente neuf chez Décathlon (discontinué)", "mentions": 18}
+    ]
+  },
+  "pricing": {
+    "original_msrp": 460,
+    "best_price": 250,
+    "best_retailer": "Leboncoin.fr (marché secondaire)",
+    "availability": "discontinued",
+    "retailers_checked": 3
+  },
+  "data_quality": {
+    "specs": "excellent",
+    "reviews": "good",
+    "pricing": "limited"
+  },
+  "duration_sec": 1200,
+  "errors": [],
+  "warnings": [
+    "Produit discontinué - disponible uniquement marché secondaire",
+    "Remplacé par ST 530 S à 659.99€ (tout suspendu)"
+  ]
+}

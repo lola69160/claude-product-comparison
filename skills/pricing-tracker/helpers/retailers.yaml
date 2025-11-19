@@ -1,0 +1,80 @@
+# Retailers Scraping Patterns
+
+# =============================================================================
+# MCP APIFY CONFIGURATION (Priorité 1)
+# =============================================================================
+
+mcp_apify:
+  amazon:
+    actor: "apify/amazon-product-scraper"
+    input_template:
+      maxItems: 1
+    output_fields: "title,price,availability,delivery,seller"
+    notes: "Retourne JSON structuré, contourne anti-bot"
+
+  other_retailers:
+    tool: "mcp__apify__apify-slash-rag-web-browser"
+    query_template: "{product_name} prix site:{retailer}"
+    maxResults: 1
+    outputFormats: ["markdown"]
+    notes: "Recherche + extraction en une requête"
+
+# =============================================================================
+# WEBFETCH FALLBACK CONFIGURATION (Priorité 2)
+# =============================================================================
+
+amazon:
+  price_selector: "#priceblock_ourprice, .a-price-whole"
+  availability_selector: "#availability span"
+  shipping_selector: "#ourprice_shippingmessage"
+  promo_selector: ".dealBadge, .savingsPercentage"
+
+decathlon:
+  price_selector: ".price, .vtmn-price_size--large"
+  availability_selector: ".product-availability"
+  shipping_selector: ".delivery-info"
+  store_pickup: ".store-availability"
+
+boulanger:
+  price_selector: ".price-sales"
+  availability_selector: ".stock-info"
+  shipping_selector: ".delivery-time"
+
+darty:
+  price_selector: ".product-price"
+  availability_selector: ".stock-label"
+
+alltricks:
+  price_selector: ".current-price"
+  availability_selector: ".availability-msg"
+
+probikeshop:
+  price_selector: ".price-value"
+  availability_selector: ".stock-status"
+
+# =============================================================================
+# FALLBACK INSTRUCTIONS
+# =============================================================================
+
+fallback:
+  mcp_timeout_ms: 120000  # 2 minutes
+  instructions: |
+    If MCP Apify fails or times out, use WebFetch with prompt:
+    "Extract pricing information from this page:
+     - Current price (number only)
+     - Stock availability (in stock / out of stock / ships in X days)
+     - Shipping cost (if mentioned)
+     - Any active promotions or discounts
+     Return as JSON."
+
+# =============================================================================
+# STRATEGY
+# =============================================================================
+
+strategy:
+  priority:
+    - mcp_apify      # Try MCP first (better reliability)
+    - webfetch       # Fallback if MCP fails
+  parallel_requests: true
+  max_retries: 1
+  cache_ttl_days: 7

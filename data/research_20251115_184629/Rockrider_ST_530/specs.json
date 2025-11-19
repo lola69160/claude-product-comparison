@@ -1,0 +1,57 @@
+{
+  "product": "Rockrider ST 530",
+  "category": "velo",
+  "type": "VTT semi-rigide",
+  "collected_at": "2025-11-15T18:52:00Z",
+  "completeness_pct": 100,
+  "sources": [
+    "meilleur-velo.fr",
+    "levelo-urbain.fr",
+    "circulerpropre.fr"
+  ],
+  "specs": {
+    "type_velo": "VTT semi-rigide",
+    "usage": "Sentiers, randonnées VTT 2-3h",
+    "poids_kg": 13.8,
+    "poids_par_taille": {
+      "S": 13.7,
+      "M": 13.8,
+      "L": 13.9,
+      "XL": 14.0
+    },
+    "taille_cadre_cm": "Variable (S/M/L/XL)",
+    "tailles_disponibles": {
+      "S": "150-164 cm",
+      "M": "165-174 cm",
+      "L": "175-184 cm",
+      "XL": "185-200 cm"
+    },
+    "materiau_cadre": "Aluminium 100%",
+    "poids_cadre_M_kg": 2.1,
+    "freins": "Hydraulique Tektro 160mm",
+    "freins_detail": "Disques hydrauliques Rockrider by Tektro, avant et arrière",
+    "suspension": "Avant 100mm",
+    "suspension_detail": "Fourche semi-rigide TECH PLATINUM 100mm avec système U-FIT réglable 55-105 kg",
+    "prix": 460,
+    "disponibilite": "Discontinué chez Décathlon (remplacé par ST 530 S à 659.99€)",
+    "roues_pouces": 27.5,
+    "pneus": "Rockrider All Conditions 27.5\" x 2.0 avec crampons latéraux",
+    "rayons": 28,
+    "nb_vitesses": 9,
+    "transmission": "Microshift mono-plateau",
+    "plateau": "32 dents (Rockrider FC ATB 500)",
+    "cassette": "11-42 dents",
+    "derailleur": "Microshift Advent avec chape freinée",
+    "chaine": "KMC Z9",
+    "cintre": "Aluminium oversize 720mm",
+    "selle": "Ergofit Evo (type hamac)",
+    "charge_max_kg": 120,
+    "variantes": ["Homme", "Femme"],
+    "garantie": "Cadre/cintre/potence à vie; pièces 2 ans; service gratuit 6 mois"
+  },
+  "notes": [
+    "Modèle discontinué - remplacé par ST 530 S (tout suspendu)",
+    "Prix original: 460€, modèle actuel ST 530 S: 659.99€",
+    "Disponible sur marché secondaire (leboncoin.fr)"
+  ]
+}

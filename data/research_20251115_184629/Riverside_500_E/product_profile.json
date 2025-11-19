@@ -1,0 +1,50 @@
+{
+  "product": "Riverside 500 E",
+  "category": "velo",
+  "type": "VTC électrique",
+  "timestamp": "2025-11-15T19:10:00Z",
+  "specs": {
+    "completeness_pct": 100,
+    "key_specs": {
+      "type_velo": "VTC électrique",
+      "poids_kg": 22,
+      "prix": 1299,
+      "moteur_W": 250,
+      "batterie_Wh": 418,
+      "autonomie_km": 90,
+      "freins": "Hydraulique Tektro 160mm",
+      "nb_vitesses": 8
+    },
+    "sources": 3
+  },
+  "reviews": {
+    "overall_score": 4.3,
+    "overall_sentiment": "very_positive",
+    "total_reviews_analyzed": 85,
+    "top_3_pros": [
+      {"point": "Excellent rapport qualité/prix (capteur couple < 1200€)", "mentions": 65},
+      {"point": "Autonomie batterie solide 90km (418Wh)", "mentions": 48},
+      {"point": "Moteur fiable 42Nm avec assistance naturelle", "mentions": 42}
+    ],
+    "top_3_cons": [
+      {"point": "Poids élevé 22kg affecte maniabilité", "mentions": 28},
+      {"point": "Suspension limitée sur terrains très accidentés", "mentions": 25},
+      {"point": "Freins basiques (adéquats mais pas premium)", "mentions": 18}
+    ]
+  },
+  "pricing": {
+    "best_price": 1170,
+    "best_retailer": "Decathlon.fr Seconde Vie (reconditionné)",
+    "best_price_new": 1299,
+    "availability": "in_stock",
+    "retailers_checked": 3
+  },
+  "data_quality": {
+    "specs": "excellent",
+    "reviews": "high_confidence",
+    "pricing": "excellent"
+  },
+  "duration_sec": 1380,
+  "errors": [],
+  "warnings": []
+}

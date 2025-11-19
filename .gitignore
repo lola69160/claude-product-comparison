@@ -1,0 +1,22 @@
+# API Keys & Secrets
+.mcp.json
+.env
+.env.*
+*.key
+credentials.json
+
+# Cache
+data/cache/
+__pycache__/
+*.pyc
+
+# Logs
+.claude/logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

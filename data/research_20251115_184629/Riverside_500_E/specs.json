@@ -1,0 +1,43 @@
+{
+  "product": "Riverside 500 E",
+  "category": "velo",
+  "type": "VTC électrique",
+  "collected_at": "2025-11-15T18:52:00Z",
+  "completeness_pct": 100,
+  "sources": [
+    "levelo-urbain.fr",
+    "en-velo-simone.fr",
+    "meilleur-velo.fr"
+  ],
+  "specs": {
+    "type_velo": "VTC électrique (Vélo Tout Chemin)",
+    "usage": "Ville, chemins légers, balades familiales",
+    "poids_kg": 22,
+    "materiau_cadre": "Aluminium 6061 hydroformé",
+    "design_cadre": "Mixte (unisex)",
+    "freins": "Hydraulique Tektro TKD 160mm",
+    "suspension": "Avant Suntour NCX SF17, 63mm débattement hydraulique",
+    "prix": 1299,
+    "prix_range": "1000-1500€",
+    "roues_pouces": 28,
+    "roues_detail": "700c",
+    "pneus": "CST 700 x 38c",
+    "nb_vitesses": 8,
+    "transmission": "Microshift H081 1×8",
+    "derailleur": "Microshift H081",
+    "cassette": "11-34 dents",
+    "plateau": "36 dents",
+    "moteur_W": 250,
+    "moteur_type": "Brushless moyeu arrière",
+    "moteur_couple_Nm": 42,
+    "batterie_Wh": 418,
+    "batterie_voltage": "36V 11.6Ah",
+    "batterie_type": "Lithium-ion",
+    "autonomie_km": 90,
+    "autonomie_detail": "80-90 km en mode 1",
+    "vitesse_max_kmh": 25,
+    "temps_charge_heures": 5,
+    "charge_max_kg": 120,
+    "garantie": "Cadre/cintre/potence à vie; pièces 2 ans; batterie 500 cycles"
+  }
+}

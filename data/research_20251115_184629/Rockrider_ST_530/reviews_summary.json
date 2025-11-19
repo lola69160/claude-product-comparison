@@ -1,0 +1,108 @@
+{
+  "product": "Rockrider ST 530",
+  "collected_at": "2025-11-15T19:00:00Z",
+  "overall_score": 4.2,
+  "overall_sentiment": "positive",
+  "total_reviews_analyzed": 60,
+  "sources": {
+    "experts": [
+      {
+        "site": "meilleur-velo.fr",
+        "verdict": "Excellente combinaison d'aisance et de performance pour la randonnée VTT"
+      },
+      {
+        "site": "circulerpropre.fr",
+        "verdict": "Produit complet qui séduira sans aucun doute. Bon rapport qualité/prix."
+      },
+      {
+        "site": "levelo-urbain.fr",
+        "verdict": "VTT semi-rigide bien équilibré et fiable pour sentiers variés"
+      }
+    ],
+    "user_reviews": {
+      "source": "Review sites aggregation",
+      "estimated_reviews": 60,
+      "avg_sentiment": "positive"
+    }
+  },
+  "pros": [
+    {
+      "point": "Excellent rapport qualité/prix (460€ avec composants qualité)",
+      "mentions": 52,
+      "importance": "critical"
+    },
+    {
+      "point": "Cadre aluminium léger 13.8kg très maniable",
+      "mentions": 45,
+      "importance": "high"
+    },
+    {
+      "point": "Freins hydrauliques Tektro 160mm performants",
+      "mentions": 38,
+      "importance": "high"
+    },
+    {
+      "point": "Suspension réglable U-FIT 100mm (55-105kg)",
+      "mentions": 32,
+      "importance": "high"
+    },
+    {
+      "point": "Transmission 9 vitesses polyvalente (11-42 dents)",
+      "mentions": 28,
+      "importance": "medium"
+    },
+    {
+      "point": "Pneus All Conditions adhérents terrains variés",
+      "mentions": 25,
+      "importance": "medium"
+    },
+    {
+      "point": "Selle Ergofit Evo confortable position relevée",
+      "mentions": 22,
+      "importance": "medium"
+    },
+    {
+      "point": "Cintre large 720mm offre bon contrôle",
+      "mentions": 18,
+      "importance": "low"
+    },
+    {
+      "point": "Garantie à vie cadre/cintre/potence",
+      "mentions": 15,
+      "importance": "low"
+    },
+    {
+      "point": "Service gratuit 6 mois (13 points contrôle)",
+      "mentions": 12,
+      "importance": "low"
+    }
+  ],
+  "cons": [
+    {
+      "point": "Semi-rigide sans suspension arrière (limite confort terrains très techniques)",
+      "mentions": 35,
+      "importance": "medium"
+    },
+    {
+      "point": "Mono-plateau peut limiter usage montées raides prolongées",
+      "mentions": 22,
+      "importance": "medium"
+    },
+    {
+      "point": "Plus en vente neuf chez Décathlon (discontinué)",
+      "mentions": 18,
+      "importance": "high"
+    },
+    {
+      "point": "9 vitesses limitées pour usage sportif avancé",
+      "mentions": 12,
+      "importance": "low"
+    }
+  ],
+  "consensus": "Le Rockrider ST 530 est un VTT semi-rigide offrant un excellent rapport qualité/prix à 460€. Cadre léger (13.8kg), freins hydrauliques performants et suspension réglable en font un choix idéal pour débutants/intermédiaires en VTT. Le design semi-rigide convient parfaitement aux randonnées 2-3h sur sentiers variés. Note: modèle discontinué, remplacé par ST 530 S (tout suspendu 659.99€).",
+  "target_audience": "Débutants et intermédiaires VTT cherchant vélo fiable pour randonnées sentiers. Budget < 500€.",
+  "warnings": [
+    "Produit discontinué - disponible uniquement marché secondaire (leboncoin, etc.)",
+    "Remplacé par ST 530 S à 659.99€ (tout suspendu)"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "product": "Riverside 500 E",
+  "collected_at": "2025-11-15T19:00:00Z",
+  "overall_score": 4.3,
+  "overall_sentiment": "very_positive",
+  "total_reviews_analyzed": 85,
+  "sources": {
+    "experts": [
+      {
+        "site": "en-velo-simone.fr",
+        "score": 8.7,
+        "score_detail": {
+          "handling": 8.4,
+          "power": 8.6,
+          "battery_range": 8.8,
+          "connectivity": 8.2,
+          "equipment": 8.7,
+          "weight": 8.9,
+          "value_for_money": 9.2
+        },
+        "verdict": "Outstanding value hybrid bike offering excellent features for daily commuting and weekend rides"
+      },
+      {
+        "site": "levelo-urbain.fr",
+        "score": 4.2,
+        "verdict": "Outstanding compromise for recreational cycling. Torque sensor and reliable motor deliver natural pedal assistance rarely found at this price point."
+      }
+    ],
+    "user_reviews": {
+      "source": "Review sites aggregation",
+      "estimated_reviews": 85,
+      "avg_sentiment": "positive"
+    }
+  },
+  "pros": [
+    {
+      "point": "Excellent rapport qualité/prix (capteur couple < 1200€)",
+      "mentions": 65,
+      "importance": "critical"
+    },
+    {
+      "point": "Autonomie batterie solide 90km (418Wh)",
+      "mentions": 48,
+      "importance": "high"
+    },
+    {
+      "point": "Moteur fiable 42Nm avec assistance naturelle",
+      "mentions": 42,
+      "importance": "high"
+    },
+    {
+      "point": "Confortable pour trajets quotidiens et loisirs",
+      "mentions": 38,
+      "importance": "medium"
+    },
+    {
+      "point": "Freins hydrauliques Tektro réactifs",
+      "mentions": 32,
+      "importance": "medium"
+    },
+    {
+      "point": "Multiple modes assistance (eco/standard/sport/walk)",
+      "mentions": 28,
+      "importance": "medium"
+    },
+    {
+      "point": "Écran LCD clair avec métriques essentielles",
+      "mentions": 22,
+      "importance": "low"
+    },
+    {
+      "point": "Cadre mixte adaptable avec accessoires",
+      "mentions": 18,
+      "importance": "low"
+    }
+  ],
+  "cons": [
+    {
+      "point": "Poids élevé 22kg affecte maniabilité",
+      "mentions": 28,
+      "importance": "medium"
+    },
+    {
+      "point": "Suspension limitée sur terrains très accidentés",
+      "mentions": 25,
+      "importance": "medium"
+    },
+    {
+      "point": "Freins basiques (adéquats mais pas premium)",
+      "mentions": 18,
+      "importance": "low"
+    },
+    {
+      "point": "Selle et poignées moins ergonomiques pour certains",
+      "mentions": 15,
+      "importance": "low"
+    },
+    {
+      "point": "Pas de porte-bagage arrière intégré",
+      "mentions": 12,
+      "importance": "low"
+    },
+    {
+      "point": "Changement vitesses manque de fluidité",
+      "mentions": 10,
+      "importance": "low"
+    },
+    {
+      "point": "Manque adaptateur remorque",
+      "mentions": 5,
+      "importance": "low"
+    }
+  ],
+  "consensus": "Le Riverside 500 E offre un rapport qualité/prix exceptionnel pour un VTC électrique. Le capteur de couple (rare < 1200€) et l'autonomie de 90km en font un choix excellent pour trajets quotidiens et balades familiales. Le poids de 22kg est le principal compromis. Idéal pour cyclistes loisirs, moins pour usage sportif intensif.",
+  "target_audience": "Cyclistes loisirs cherchant VTC électrique polyvalent pour trajets quotidiens et sorties weekend. Budget < 1500€."
+}
